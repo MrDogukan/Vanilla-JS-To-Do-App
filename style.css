@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 85vw;
+    max-width: 700px;
+    height: 80vh;
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px rgba(34, 24, 24, 0.911);
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    font-size: 2rem;
+    color: black;
+    text-shadow: 3px 5px 10px rgb(6, 80, 83);
+    text-align: center;
+    padding: 1rem;
+}
+
+.todo-add {
+    width: 90%;
+    display: flex;
+    margin-top: 1rem;
+    font-size: 0.5rem;
+}
+
+#todo-input {
+    width: 80%;
+    margin-right: 10px;
+    border-color: white;
+    border-radius: 10px;
+    outline: none;
+    padding: 0.5rem;
+}
+
+#todo-button {
+    width: 20%;
+    padding: 0.7rem;
+    background-color: rgb(10, 67, 69);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#todo-button:hover {
+    opacity: 0.7;
+}
+
+.todos {
+    width: 90%;
+    margin-top: 2rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.todos ul {
+    list-style: none;
+}
+
+ul li {
+    background-color: antiquewhite;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+ul li:nth-child(even) {
+    background: #dde6f5;
+}
+
+li i {
+    padding: 1rem;
+    color: rgb(4, 63, 69);
+    cursor: pointer;
+}
+
+li i:hover {
+    opacity: 0.7;
+}
+
+li p {
+    flex: auto;
+    padding: 0.2rem;
+}
+
+li.checked > .fa-check {
+    color: #00e676;
+}
+
+li.checked > p {
+    color: rgb(6, 45, 46);
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 576px) {
+    li p {
+        font-size: 0.8rem;
+    }
+}
